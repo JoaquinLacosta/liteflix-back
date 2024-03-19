@@ -3,7 +3,6 @@ import { Document, Model } from "mongoose";
 export interface Movie {
   title: string;
   imageUrl: string;
-  stars: number;
   createdAt?: Date;
 }
 

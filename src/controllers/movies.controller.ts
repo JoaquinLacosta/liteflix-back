@@ -9,11 +9,9 @@ const getAllMovies = async (req: Request, res: Response) => {
 
 const uploadMovie = async (req: Request, res: Response) => {
   const { title, movieName } = req.body;
-  const randomStars = Math.floor(Math.random() * 11);
   const movie = await moviesService.createMovie({
     title,
     imageUrl: `${process.env.AWS_IMAGES_BASE_URL}/${movieName}`,
-    stars: randomStars,
   });
   res.status(200).json(new MoviesMapper().toMovieResponseDTO(movie));
 };

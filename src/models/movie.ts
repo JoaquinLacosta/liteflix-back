@@ -5,7 +5,6 @@ const movieSchema = new mongoose.Schema<MovieDoc>(
   {
     title: String,
     imageUrl: String,
-    stars: Number,
   },
   { timestamps: true }
 );
