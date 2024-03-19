@@ -2,14 +2,12 @@
   "name": "litebox-back",
   "version": "1.0.0",
   "description": "",
-  "main": "app.ts",
+  "main": "src/index.ts",
   "scripts": {
-    "start:dev": "nodemon --watch src/**/**.* --ext 'ts,json' --exec ts-node app.ts",
-    "start": "nodemon app.ts",
+    "start:dev": "nodemon --watch src/**/**.* --ext 'ts,json' --exec ts-node src/index.ts",
+    "start": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && tsc",
-    "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist"
+    "vercel-build": "echo hello"
   },
   "engines": {
     "node": "18.x"

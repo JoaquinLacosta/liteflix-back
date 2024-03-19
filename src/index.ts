@@ -5,8 +5,8 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 
-import moviesRouter from "./src/routes/movies.routes";
-import awsRouter from "./src/routes/aws.routes";
+import moviesRouter from "./routes/movies.routes";
+import awsRouter from "./routes/aws.routes";
 
 const app = express();
 

@@ -11,6 +11,6 @@
     "allowSyntheticDefaultImports": true,
 		"sourceMap": true
   },
-  "include": ["src/**/*.ts", "app.ts"],
+  "include": ["./api/*.ts", "src/**/*.ts", "src/index.ts"],
   "exclude": ["node_modules"]
 }
