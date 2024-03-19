@@ -6,8 +6,7 @@
   "scripts": {
     "start:dev": "nodemon --watch src/**/**.* --ext 'ts,json' --exec ts-node app.ts",
     "start": "ts-node app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "vercel-build": "echo building"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": "18.x"
