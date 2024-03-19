@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 
@@ -14,6 +14,10 @@ app.use(cors());
 app.use("*", cors());
 
 app.use(express.json());
+
+app.get('/', (req: Request, res: Response) => {
+  return res.send('Health ok')
+})
 
 app.use("/movies", moviesRouter);
 app.use("/aws", awsRouter);
