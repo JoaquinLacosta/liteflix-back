@@ -6,11 +6,19 @@
   "scripts": {
     "start:dev": "nodemon --watch src/**/**.* --ext 'ts,json' --exec ts-node app.ts",
     "start": "nodemon app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist"
   },
   "engines": {
     "node": "18.x"
   },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
