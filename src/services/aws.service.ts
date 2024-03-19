@@ -2,8 +2,8 @@ import S3 from "aws-sdk/clients/s3";
 
 const S3Client = new S3({
   apiVersion: "2006-03-01",
-  accessKeyId: process.env.AWS_ACCESS_KEY,
-  secretAccessKey: process.env.AWS_SECRET_KEY,
+  accessKeyId: process.env.LITEFLIX_AWS_ACCESS_KEY,
+  secretAccessKey: process.env.LITEFLIX_AWS_SECRET_KEY,
   region: process.env.AWS_REGION,
   signatureVersion: "v4",
 });
