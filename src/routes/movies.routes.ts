@@ -9,7 +9,7 @@ moviesRouter.get("/", moviesController.getAllMovies);
 moviesRouter.post(
   "/uploadmovie",
   validateRequest(CreateMovieBody),
-  moviesController.uploadMovie
+  moviesController.uploadMovie,
 );
 
 export default moviesRouter;

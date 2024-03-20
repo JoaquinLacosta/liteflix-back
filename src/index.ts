@@ -15,9 +15,9 @@ app.use("*", cors());
 
 app.use(express.json());
 
-app.get('/', (req: Request, res: Response) => {
-  return res.send('Health ok')
-})
+app.get("/", (req: Request, res: Response) => {
+  return res.send("Health ok");
+});
 
 app.use("/movies", moviesRouter);
 app.use("/aws", awsRouter);

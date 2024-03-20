@@ -8,7 +8,7 @@ const awsRouter: Router = express.Router();
 awsRouter.post(
   "/getSignedUrl",
   validateRequest(GenerateSignedURLBody),
-  awsController.getSignedUrl
+  awsController.getSignedUrl,
 );
 
 export default awsRouter;

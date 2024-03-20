@@ -6,7 +6,7 @@ const movieSchema = new mongoose.Schema<MovieDoc>(
     title: String,
     imageUrl: String,
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 const movieModel: MovieModel = mongoose.model<MovieDoc>("movie", movieSchema);

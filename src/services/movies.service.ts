@@ -1,4 +1,4 @@
-import { Movie, MovieDoc, MovieModel } from "../interfaces/movie.interfaces";
+import { Movie, MovieDoc } from "../interfaces/movie.interfaces";
 import movieModel from "../models/movie";
 
 export const createMovie = async (movieData: Movie): Promise<MovieDoc> => {

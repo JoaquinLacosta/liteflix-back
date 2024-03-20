@@ -4,6 +4,8 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
+    "lint": "npx eslint src",
+    "format": "prettier src --write",
     "start:dev": "nodemon --watch src/**/**.* --ext 'ts,json' --exec ts-node src/index.ts",
     "start": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",

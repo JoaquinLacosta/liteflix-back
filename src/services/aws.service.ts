@@ -8,18 +8,22 @@ const S3Client = new S3({
   signatureVersion: "v4",
 });
 
-export const generateSignedURL = (filename: string, extension: string): string | void => {
+export const generateSignedURL = (
+  filename: string,
+  extension: string,
+): string | void => {
   const s3Params = {
     Bucket: process.env.S3_BUCKET_NAME,
     Key: filename,
     Expires: 60,
     ContentType: `image/${extension}`,
-    ACL: "public-read"
+    ACL: "public-read",
   };
 
   const signedUrl = S3Client.getSignedUrl("putObject", s3Params);
 
-  if(!signedUrl) throw new Error("There was a problem obtaining the signedUrl")
+  if (!signedUrl)
+    throw new Error("There was a problem obtaining the signedUrl");
 
   return signedUrl;
 };
